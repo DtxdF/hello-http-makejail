@@ -1,0 +1,4 @@
+INCLUDE gh+AppJail-makejails/darkhttpd
+
+CMD echo "Hello, world!" > /usr/local/www/darkhttpd/index.html
+CMD echo "UUID: `uuidgen -r`" >> /usr/local/www/darkhttpd/index.html

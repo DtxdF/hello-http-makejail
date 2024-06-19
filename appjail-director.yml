@@ -1,0 +1,9 @@
+options:
+  - virtualnet: ':<random> default'
+  - nat:
+
+services:
+  hello-http:
+    name: hello-http
+    arguments:
+      - darkhttpd_tag: !ENV '${TAG}'
