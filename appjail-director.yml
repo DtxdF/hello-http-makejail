@@ -7,3 +7,4 @@ services:
     name: hello-http
     arguments:
       - darkhttpd_tag: !ENV '${TAG}'
+      - id: 'hello-http'

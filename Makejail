@@ -1,4 +1,10 @@
+ARG id?
+
 INCLUDE gh+AppJail-makejails/darkhttpd
 
 CMD echo "Hello, world!" > /usr/local/www/darkhttpd/index.html
 CMD echo "UUID: `uuidgen -r`" >> /usr/local/www/darkhttpd/index.html
+
+RAW if [ -n "${id}" ]; then
+    CMD echo "ID: ${id}" >> /usr/local/www/darkhttpd/index.html
+RAW fi
